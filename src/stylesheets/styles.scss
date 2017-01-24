@@ -1,0 +1,12 @@
+$turquoise: turquoise;
+$indigo: indigo;
+
+.hello {
+	background-color: $turquoise;
+	color: $indigo;
+}
+
+.goodbye {
+	background-color: $indigo;
+	color: $turquoise;
+}
