@@ -1,20 +1,31 @@
-import React from 'react'
 import '../stylesheets/ui.scss'
 
-export const SkiDayCounts = React.createClass({
-	render() {
-		return (
-			<div className="ski-day-count">
-				<div className="total-days">
-					<span>5 days</span>
-				</div>
-				<div className="powder-days">
-					<span>3 days</span>
-				</div>
-				<div className="backcountry-days">
-					<span>1 days</span>
-				</div>
-			</div>
-		)
-	}
-});
+const decimalToPercent = (decimal) => {
+		return ( (decimal * 100 ) + "%");
+}
+
+const calcGoalProgress = ( total, goal ) => {
+		return decimalToPercent( total / goal );
+}
+
+export const SkiDayCounts = ({total, powder, backcountry, goal}) => (
+	<div className="ski-day-count">
+		<div className="total-days">
+			<span>{total} days</span>
+		</div>
+		<div className="powder-days">
+			<span>{powder} days</span>
+		</div>
+		<div className="backcountry-days">
+			<span>{backcountry} days</span>
+		</div>
+		<div>
+			<span>
+				{calcGoalProgress(
+					total,
+					goal
+				)}
+			</span>
+		</div>
+	</div>
+)
