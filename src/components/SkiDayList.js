@@ -29,7 +29,7 @@ SkiDayList.propTypes = {
 		} else if (!props.days.length) {
 			return new Error("A days value is required")
 		} else {
-			return nulls
+			return null
 		}
 	}
 }
