@@ -1,3 +1,4 @@
+import { PropTypes } from 'react'
 import '../stylesheets/ui.scss'
 import Terrain from 'react-icons/lib/md/terrain'
 import Snowflake from 'react-icons/lib/ti/weather-snow'
@@ -11,7 +12,7 @@ const calcGoalProgress = ( total, goal ) => {
 		return decimalToPercent( total / goal );
 }
 
-export const SkiDayCounts = ({total, powder, backcountry, goal}) => (
+export const SkiDayCounts = ({total=30, powder, backcountry, goal}) => (
 	<div className="ski-day-count">
 		<div className="total-days">
 			<span>{total} </span><Calendar /><span>days</span>
@@ -32,3 +33,10 @@ export const SkiDayCounts = ({total, powder, backcountry, goal}) => (
 		</div>
 	</div>
 )
+
+SkiDayCounts.propTypes = {
+	total: PropTypes.number,
+	powder: PropTypes.number,
+	backcountry: PropTypes.number,
+	goal: PropTypes.number
+}
