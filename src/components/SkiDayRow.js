@@ -5,7 +5,7 @@ import Calendar from 'react-icons/lib/fa/calendar'
 export const SkiDayRow = ({resort, date, powder, backcountry}) => (
 	<tr>
 		<td>
-			{date.getDate()}-{date.getMonth() + 1}-{date.getFullYear()}
+			{date}
 		</td>
 		<td>
 			{resort}

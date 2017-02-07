@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import './stylesheets/ui.scss'
+import './stylesheets/index.scss'
 import { Router, Route, hashHistory} from 'react-router'
 import { SkiDayList } from './components/SkiDayList'
 import { App } from './components/App'
